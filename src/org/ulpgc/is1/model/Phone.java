@@ -5,6 +5,8 @@ import java.util.regex.Pattern;
 
 /**
  * Clase phone para almacenar el teléfono de contacto de los clientes.
+ *
+ * @version 1.0
  */
 public class Phone {
 

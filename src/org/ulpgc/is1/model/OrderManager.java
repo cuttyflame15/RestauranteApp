@@ -1,20 +1,26 @@
 package org.ulpgc.is1.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Clase organizadora de métodos.
- * +addCustomer()
- * +addRestaurant()
- * +addDish()
- * +getCustomer()
- * +getRestaurant()
- * +getDish()
- * +order()
- * RESTRICCIONES?
+ * Clase organizadora de métodos que administra los pedidos de los clientes.
+ * @version 1.0
+ * RESTRICCIONES en cada clase?
  */
 public class OrderManager {
 
-    //Métodos
+    /* Atributos */
+    private List<Restaurant> restaurantList;
+
+    /* Constructor */
+    public OrderManager() {
+        restaurantList = new ArrayList();
+    }
+
+    /* Métodos */
     public void addCustomer() {
+
 
     }
 
@@ -27,19 +33,18 @@ public class OrderManager {
     }
 
     public String getCustomer() {
-        return ""
+        return "";
     }
 
     public String getRestaurant() {
-        return ""
+        return "";
     }
 
     public String getDish() {
-        return ""
+        return "";
     }
 
     public String order() {
-        return ""
+        return "";
     }
-
 }

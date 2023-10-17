@@ -5,21 +5,17 @@ import java.util.List;
 
 /**
  * Clase que define un menú de platos con nombre, tipo de menú y lista de platos.
- * @version 1.0
+ * @version 1.1
  */
 public class Menu {
-
-
 
     /* Atributos */
     private List<Dish> dishList;
     private String name;
     private MenuType menuType;
 
-
-
     /* Constructor */
-    public Menu(String name) {
+    public Menu(String name, MenuType menuType) {
         this.name = name;
         this.menuType = menuType;
         dishList = new ArrayList();
@@ -36,20 +32,13 @@ public class Menu {
     public MenuType getMenuType() {
         return menuType;
     }
-
     public void setMenuType(MenuType menuType) {
         this.menuType = menuType;
     }
 
-    public List<Dish> getDishList() {
-        return dishList;
-    }
-    public void setDishList(List<Dish> dishList) {
-        this.dishList = dishList;
-    }
-
     /* Métodos */
-    public void addDish() {
-
+    public void addDish(String name, String description, int price) {
+        Dish dish = new Dish(name, description, price);
+        this.dishList.add(dish);
     }
 }

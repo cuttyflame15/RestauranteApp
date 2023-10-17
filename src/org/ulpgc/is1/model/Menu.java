@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Clase que define un menú de platos con nombre, tipo de menú y lista de platos.
- * @version 1.1
+ * @version 1.2
  */
 public class Menu {
 
@@ -14,7 +14,12 @@ public class Menu {
     private String name;
     private MenuType menuType;
 
-    /* Constructor */
+    /** Constructor de la clase Menu.
+     *
+     * @param name Nombre del menú.
+     * @param menuType Tipo del menú.
+     * dishList: Lista de platos del menú.
+     */
     public Menu(String name, MenuType menuType) {
         this.name = name;
         this.menuType = menuType;

@@ -2,7 +2,7 @@ package org.ulpgc.is1.model;
 
 /**
  * Clase Dish para definir un plato, con nombre, descripción y precio del mismo.
- * @version 1.0
+ * @version 1.1
  */
 public class Dish {
 
@@ -11,7 +11,12 @@ public class Dish {
     private String description;
     private int price;
 
-    /* Constructor */
+    /** Constructor de la clase Dish.
+     *
+     * @param name Nombre del plato.
+     * @param description Descripción del plato.
+     * @param price Precio del plato.
+     */
     public Dish(String name, String description, int price) {
         this.name = name;
         this.description = description;

@@ -20,7 +20,8 @@ public class Order {
     private Customer customer;
 
     /**
-     * Constructor de clase Order
+     * Constructor de clase Order.
+     *
      * @param customer Objeto de la clase Customer que represente al cliente.
      * @param restaurant Objeto de la clase Restaurant que represente el restaurante.
      */

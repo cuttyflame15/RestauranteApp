@@ -1,6 +1,7 @@
 package org.ulpgc.is1.control;
 
 public class Main {
+    // Tycho: Address, Customer,  Order, ordertItem y Phone.
     // i. Init. Crear dos clientes.
     // ii. Init. Crear dos restaurantes. (*) En el caso que el restaurante tenga un número de teléfono no válido se almacenará el valor: “XXXX”.
     // iii. Init. Crear tres platos diferentes.

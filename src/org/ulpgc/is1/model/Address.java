@@ -19,10 +19,10 @@ public class Address {
     /**
      * Constructor de la clase.
      *
-     * @param street String que representa la calle
-     * @param number int que representa el número de la dirección
-     * @param postalCode int que representa el número del código postal
-     * @param city String que representa el nombre de la ciudad
+     * @param street String que representa la calle.
+     * @param number int que representa el número de la dirección.
+     * @param postalCode int que representa el número del código postal.
+     * @param city String que representa el nombre de la ciudad.
      */
     public Address(String street, int number, int postalCode, String city) {
         this.street = street;

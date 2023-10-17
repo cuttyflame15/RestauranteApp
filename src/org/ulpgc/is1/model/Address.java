@@ -1,11 +1,29 @@
 package org.ulpgc.is1.model;
 
+/**
+ * Clase Address para definir una dirección con calle, número, código postal
+ * y ciudad
+ *
+ * @version 1.0
+ */
+
 public class Address {
+
+    /* Atributos */
     private String street;
     private int number;
     private int postalCode;
     private String city;
 
+
+    /**
+     * Constructor de la clase.
+     *
+     * @param street String que representa la calle
+     * @param number int que representa el número de la dirección
+     * @param postalCode int que representa el número del código postal
+     * @param city String que representa el nombre de la ciudad
+     */
     public Address(String street, int number, int postalCode, String city) {
         this.street = street;
         this.number = number;
@@ -13,7 +31,8 @@ public class Address {
         this.city = city;
     }
 
-    public String etAddressInformation() {
+    /* Métodos */
+    public String getAddressInformation() {
         return getStreet() + ", "  + getNumber() +  ", "  + getPostalCode() +  ", "  + getCity();
     }
 

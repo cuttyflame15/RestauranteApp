@@ -72,6 +72,5 @@ public class Customer {
     }
 
     public void removeOrder(int index) {
-        this.orderList.remove(index);
-    }
+        this.orderList.remove(index);    }
 }

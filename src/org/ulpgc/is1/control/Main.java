@@ -13,8 +13,8 @@ public class Main {
         // ii. Init. Crear dos restaurantes. (*) En el caso que el restaurante tenga un número de teléfono no válido se almacenará el valor: “XXXX”.
         Menu myKidsMenu = new Menu("Menú para niño", MenuType.Kids);
         Menu myDailyMenu = new Menu("Menu diario！", MenuType.Daily);
-        orderManager.addRestaurant("La Preferida", "654444444", myKidsMenu);
-        orderManager.addRestaurant("Casa Mario", "655555555", myDailyMenu);
+        orderManager.addRestaurant("La Preferida", "654444444");
+        orderManager.addRestaurant("Casa Mario", "655555555");
         // iii. Init. Crear tres platos diferentes.
         orderManager.addDish("Hamburguesa Ladrón Fantasma", "Hamburguesa de pollo", 13);
         orderManager.addDish("Ensalada bofuri", "Ensalada de verduras del país", 7);

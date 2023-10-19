@@ -39,8 +39,9 @@ public class OrderManager {
         this.restaurantList.add(newRestaurant);
     }
 
-    public void addDish() {
-
+    public void addDish(String name, String description, int price) {
+        Dish newDish = new Dish(name, description, price);
+        this.dishList.add(newDish);
     }
 
     public Customer getCustomer(int i) {

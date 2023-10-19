@@ -34,24 +34,25 @@ public class OrderManager {
         this.dishList.add(newDish);
     }
 
-    public void addRestaurant() {
-
+    public void addRestaurant(String name, String number, Menu menu) {
+        Restaurant newRestaurant = new Restaurant(name, number, menu);
+        this.restaurantList.add(newRestaurant);
     }
 
     public void addDish() {
 
     }
 
-    public String getCustomer() {
-        return "";
+    public Customer getCustomer(int i) {
+        return this.customerList.get(i);
     }
 
-    public String getRestaurant() {
-        return "";
+    public Restaurant getRestaurant(int i) {
+        return this.restaurantList.get(int i);
     }
 
-    public String getDish() {
-        return "";
+    public Dish getDish(int i) {
+        return this.dishList.get(i);
     }
 
 

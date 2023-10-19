@@ -13,11 +13,13 @@ public class OrderManager {
     /* Atributos */
     private List<Customer> customerList;
     private List<Restaurant> restaurantList;
+    private List<Dish> dishList;
 
     /* Constructor */
     public OrderManager() {
-        restaurantList = new ArrayList();
-        customerList = new ArrayList();
+        this.restaurantList = new ArrayList();
+        this.customerList = new ArrayList();
+        this.dishList = new ArrayList();
     }
 
     /* Métodos */

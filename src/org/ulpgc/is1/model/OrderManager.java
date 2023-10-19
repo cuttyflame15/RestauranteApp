@@ -34,8 +34,8 @@ public class OrderManager {
         this.dishList.add(newDish);
     }
 
-    public void addRestaurant(String name, String number, Menu menu) {
-        Restaurant newRestaurant = new Restaurant(name, number, menu);
+    public void addRestaurant(String name, String number) {
+        Restaurant newRestaurant = new Restaurant(name, number);
         this.restaurantList.add(newRestaurant);
     }
 

@@ -11,11 +11,13 @@ import java.util.List;
 public class OrderManager {
 
     /* Atributos */
+    private List<Customer> customerList;
     private List<Restaurant> restaurantList;
 
     /* Constructor */
     public OrderManager() {
         restaurantList = new ArrayList();
+        customerList = new ArrayList();
     }
 
     /* Métodos */
@@ -48,8 +50,10 @@ public class OrderManager {
     }
 
     public void deleteCustomer(int i) {
+        this.customerList.remove(i);
     }
 
     public int numberOfCustomers() {
+        return this.customerList.size();
     }
 }

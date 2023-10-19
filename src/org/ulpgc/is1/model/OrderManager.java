@@ -48,7 +48,7 @@ public class OrderManager {
     }
 
     public Restaurant getRestaurant(int i) {
-        return this.restaurantList.get(int i);
+        return this.restaurantList.get(i);
     }
 
     public Dish getDish(int i) {
@@ -67,6 +67,14 @@ public class OrderManager {
 
     public void deleteCustomer(int i) {
         this.customerList.remove(i);
+    }
+
+    public void deleteRestaurant(int i) {
+        this.restaurantList.remove(i);
+    }
+
+    public void deleteDish(int i) {
+        this.dishList.remove(i);
     }
 
     public int numberOfCustomers() {

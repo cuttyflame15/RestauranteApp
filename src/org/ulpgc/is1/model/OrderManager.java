@@ -23,8 +23,10 @@ public class OrderManager {
     }
 
     /* Métodos */
-    public void addCustomer() {
 
+    public void addCustomer(String name, String surname, String address, int number, int postalCode, String city) {
+        Customer newCustomer = new Customer(name, surname, address, number, postalCode, city);
+        this.customerList.add(newCustomer);
     }
 
     public void addRestaurant() {

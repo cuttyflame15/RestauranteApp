@@ -15,8 +15,9 @@ public class Restaurant {
     private Phone phone;
 
     /* Constructor */
-    public Restaurant(String name) {
+    public Restaurant(String name, String number) {
         this.name = name;
+
         menuList = new ArrayList();
     }
 

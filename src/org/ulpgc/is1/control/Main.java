@@ -1,9 +1,6 @@
 package org.ulpgc.is1.control;
 
-import org.ulpgc.is1.model.Menu;
-import org.ulpgc.is1.model.Order;
-import org.ulpgc.is1.model.OrderManager;
-import org.ulpgc.is1.model.Restaurant;
+import org.ulpgc.is1.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +12,10 @@ public class Main {
         orderManager.addCustomer("TychoPersona2", "Quintana", "La Herradura", 157, 35000,"Telde");
         orderManager.addCustomer("Tycho", "Quintana", "La Herradura", 157, 35000,"Telde");
         // ii. Init. Crear dos restaurantes. (*) En el caso que el restaurante tenga un número de teléfono no válido se almacenará el valor: “XXXX”.
-        Menu myKidsMenu = new Menu("Menú piolisima", "Kids");
-        Menu myDailyMenu = new Menu("Menu ありがとございます！", "Daily");
+        MenuType infantil = new MenuType();
+        MenuType diario = new MenuType();
+        Menu myKidsMenu = new Menu("Menú para niño", infantil);
+        Menu myDailyMenu = new Menu("Menu diario！", diario);
         orderManager.addRestaurant("La Preferida", "654444444", myKidsMenu);
         orderManager.addRestaurant("Casa Mario", "655555555", myDailyMenu);
         // iii. Init. Crear tres platos diferentes.

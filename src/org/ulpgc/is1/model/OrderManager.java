@@ -21,7 +21,6 @@ public class OrderManager {
     /* Métodos */
     public void addCustomer() {
 
-
     }
 
     public void addRestaurant() {
@@ -46,5 +45,11 @@ public class OrderManager {
 
     public String order() {
         return "";
+    }
+
+    public void deleteCustomer(int i) {
+    }
+
+    public int numberOfCustomers() {
     }
 }

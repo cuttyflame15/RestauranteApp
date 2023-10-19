@@ -45,8 +45,14 @@ public class OrderManager {
         return "";
     }
 
-    public String order() {
-        return "";
+
+    public void order(Customer customer, Restaurant restaurant, List<Integer> dishesId, List<Integer> quantity) {
+        Order newOrder = new Order(customer, restaurant);
+        int length = dishesId.size();
+        for (int index = 0; index < length; index++) {
+            OrderItem newOrderItem = new OrderItem(dishList.get(dishesId.get(index)), quantity.get(index));
+            newOrder.addOrder(newOrderItem);
+        }
     }
 
     public void deleteCustomer(int i) {

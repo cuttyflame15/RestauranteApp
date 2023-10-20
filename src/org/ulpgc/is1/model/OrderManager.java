@@ -53,12 +53,12 @@ public class OrderManager {
 
 
     public void order(Customer customer, Restaurant restaurant, List<Integer> dishesId, List<Integer> quantity) {
-        Order newOrder = new Order(customer, restaurant);
         int length = dishesId.size();
+        List<Dish> dishOrder = new ArrayList<>();
         for (int index = 0; index < length; index++) {
-            OrderItem newOrderItem = new OrderItem(dishList.get(dishesId.get(index)), quantity.get(index));
-            newOrder.addOrder(newOrderItem);
+            dishOrder.add(dishList.get(dishesId.get(index)));
         }
+        customer.addOrder(restaurant, dishesId, quantity);
     }
 
     public void deleteCustomer(int i) {

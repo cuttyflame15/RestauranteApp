@@ -29,7 +29,6 @@ public class Order {
         this.id = NEXT_ID++;
         this.orderItemList = new ArrayList<OrderItem>();
         this.customer = customer;
-        this.customer.addOrder(this);
         this.restaurant = restaurant;
     }
 

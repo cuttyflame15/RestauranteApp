@@ -63,8 +63,14 @@ public class Customer {
         this.address.setCity(city);
     }
 
-    public void addOrder(Order order) {
-        this.orderList.add(order);
+    public void addOrder(Restaurant restaurant, List<Dish> dishList, List<Integer> quantity) {
+        Order newOrder = new Order(this, restaurant);
+        int length = dishList.size();
+        for (int index; index < length; index++) {
+            OrderItem newOrderItem = new OrderItem(dishList.get(index), quantity.get(index));
+            newOrder.addOrder(newOrderItem);
+        }
+        this.orderList.add(newOrder);
     }
 
     public Order getOrder(int index) {

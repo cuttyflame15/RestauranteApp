@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * Clase OrderItem para almacenar los platos y cantidades del pedido.
  *
- * @version 1.0
+ * @version 1.1
  */
 public class OrderItem {
 
@@ -41,7 +41,7 @@ public class OrderItem {
     }
 
     /* Métodos */
-    // Método equals para que la lista funcione correctamente
+    // Método equals() para que el método .contains() funcione correctamente.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

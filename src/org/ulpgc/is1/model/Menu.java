@@ -6,7 +6,7 @@ import java.util.Objects;
 
 /**
  * Clase que define un menú de platos con nombre, tipo de menú y lista de platos.
- * @version 1.3
+ * @version 1.4
  */
 public class Menu {
 
@@ -54,6 +54,7 @@ public class Menu {
         }
     }
 
+    // Método equals() para que el método .contains() funcione correctamente.
     @Override
     public boolean equals(Object other) {
         if (this == other) return true;

@@ -4,7 +4,7 @@ import java.util.Objects;
 
 /**
  * Clase Dish para definir un plato, con nombre, descripción y precio del mismo.
- * @version 1.0
+ * @version 1.1
  */
 public class Dish {
 
@@ -47,7 +47,7 @@ public class Dish {
         this.price = price;
     }
 
-    // Método equals para que la lista funcione correctamente
+    // Método equals() para que el método .contains() funcione correctamente.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

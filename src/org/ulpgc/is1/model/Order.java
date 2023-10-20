@@ -8,7 +8,7 @@ import java.util.List;
  * Clase Order para representar las peticiones de los clientes, conteniendo al cliente
  * y al restaurante al que se realiza la petición.
  *
- * @version 1.0
+ * @version 1.3
  */
 public class Order {
 
@@ -81,7 +81,7 @@ public class Order {
         this.orderItemList.add(orderItem);
     }
 
-    // Método equals para que la lista funcione correctamente
+    // Método equals() para que el método .contains() funcione correctamente.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

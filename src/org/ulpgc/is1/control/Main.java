@@ -18,8 +18,6 @@ public class Main {
         orderManager.addCustomer("Xiao Hui", "Huang", "Practicante Ignacio Rodríguez", 1, 35017,"Las Palmas");
         orderManager.addCustomer("Tycho", "Quintana", "La Herradura", 157, 35000,"Telde");
         // ii. Init. Crear dos restaurantes. (*) En el caso que el restaurante tenga un número de teléfono no válido se almacenará el valor: “XXXX”.
-        //Menu myKidsMenu = new Menu("Menú para niño", MenuType.Kids);
-        //Menu myDailyMenu = new Menu("Menu diario！", MenuType.Daily);
         orderManager.addRestaurant("La Parrilla ardiente", "62600","Menú sabroso", MenuType.Daily);
         orderManager.addRestaurant("Cafetería EII", "655555555","Menú IS1", MenuType.Tasting);
         // iii. Init. Crear tres platos diferentes.
@@ -40,8 +38,8 @@ public class Main {
         System.out.println("Plato: " + orderManager.getDish(2).getName() + ". Descripcion: " + orderManager.getDish(2).getDescription() + ". Precio: " + orderManager.getDish(2).getPrice() + "€");
         System.out.println();
         // vii. Crear un pedido por parte del primer cliente, al primer restaurante, que incluya los dos últimos platos del catálogo. (*) Sugerencia: para especificar los platos y la cantidad de ellos, se pueden utilizar dos ArrayList<Integer> que indiquen la posición del plato en el catálogo y la cantidad de dicho plato, respectivamente. (void order(Customer customer, Restaurant restaurant, ArrayList<Integer> dishesId, ArrayList<Integer> quantity))
-        List<Integer> dishes = new ArrayList<Integer>();
-        List<Integer> quantity = new ArrayList<Integer>();
+        List<Integer> dishes = new ArrayList<>();
+        List<Integer> quantity = new ArrayList<>();
         dishes.add(1);
         dishes.add(2);
         quantity.add(2);

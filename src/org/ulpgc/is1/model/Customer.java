@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * Clase Customer para definir un cliente con nombre, apellidos y dirección.
  *
- * @version 1.3
+ * @version 1.4
  */
 public class Customer {
 
@@ -84,7 +84,7 @@ public class Customer {
         }
     }
 
-    // Método equals para que la lista funcione correctamente
+    // Método equals() para que el método .contains() funcione correctamente.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -6,7 +6,7 @@ import java.util.Objects;
  * Clase Address para definir una dirección con calle, número, código postal
  * y ciudad
  *
- * @version 1.0
+ * @version 1.1
  */
 
 public class Address {
@@ -72,7 +72,7 @@ public class Address {
         this.city = city;
     }
 
-    // Método equals para poder comparar Customers
+    // Método equals() para que el método .contains() funcione correctamente.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

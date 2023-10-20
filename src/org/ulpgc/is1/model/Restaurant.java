@@ -6,7 +6,7 @@ import java.util.Objects;
 
 /**
  * Clase de restaurante con nombre, teléfono y una lista de menús, con método para añadir menús a la lista.
- * @version 1.6
+ * @version 1.7
  */
 public class Restaurant {
 
@@ -86,7 +86,8 @@ public class Restaurant {
         }
         return result;
     }
-    
+
+    // Método equals() para que el método .contains() funcione correctamente.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

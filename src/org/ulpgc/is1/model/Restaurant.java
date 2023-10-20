@@ -28,9 +28,9 @@ public class Restaurant {
     public Restaurant(String name, String input_phone, String menuName, MenuType menuType) {
         this.name = name;
         this.phone = new Phone(input_phone);
-        this.menuList = new ArrayList();
+        this.menuList = new ArrayList<>();
         this.addMenu(menuName, menuType);
-        this.orderList = new ArrayList();
+        this.orderList = new ArrayList<>();
     }
 
     /* Getters y setters */
@@ -78,6 +78,7 @@ public class Restaurant {
         }
     }
 
+    //Se sugiere usar un StringBuilder pero no nos lo han enseñado aún, así que se descarta.
     public String menuOfRestaurant () {
         String result = "";
         for (Menu menu: this.menuList) {

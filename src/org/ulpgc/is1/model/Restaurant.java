@@ -41,7 +41,7 @@ public class Restaurant {
     public void setPhone(Phone phone) {
         this.phone = phone;
     }
-    public List<Order> getOrderList () {
+    public List<Order> getOrderList() {
         return orderList;
     }
 

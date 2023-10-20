@@ -26,6 +26,7 @@ public class Phone {
         }
     }
 
+
     /* Métodos */
     public boolean isValid(String number) {
         Pattern pattern = Pattern.compile("6{1}[0-9]{8}|7{1}[0-9]{8}|928{1}[0-9]{6}");

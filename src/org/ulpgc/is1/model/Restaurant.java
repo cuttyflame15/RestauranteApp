@@ -17,13 +17,13 @@ public class Restaurant {
     /** Constructor de Restaurant
      *
      * @param name Nombre del restaurante.
-     * @param phone Teléfono del restaurante
+     * @param input_phone Teléfono introducido del restaurante
      * menuList: Lista de menús.
      */
-    public Restaurant(String name, Phone phone) {
+    public Restaurant(String name, String input_phone) {
         this.name = name;
-        this.phone = phone;
-        menuList = new ArrayList();
+        Phone phone = new Phone(input_phone);
+        this.menuList = new ArrayList();
     }
 
     /* Getters y setters */

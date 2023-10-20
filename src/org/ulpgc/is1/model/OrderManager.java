@@ -5,46 +5,76 @@ import java.util.List;
 
 /**
  * Clase organizadora de métodos que administra los pedidos de los clientes.
- * @version 1.0
+ * @version 1.1
  * RESTRICCIONES en cada clase?
  */
 public class OrderManager {
 
     /* Atributos */
     private List<Restaurant> restaurantList;
+    private List<Customer> customerList;
+    private List<Dish> dishList;
 
     /* Constructor */
     public OrderManager() {
         restaurantList = new ArrayList();
+        customerList = new ArrayList();
+        dishList = new ArrayList();
+
     }
 
     /* Métodos */
-    public void addCustomer() {
-
-
+    public void addCustomer(String name, String surname, String address, int number, int postalCode, String city) {
+        Customer newCustomer = new Customer(name, surname, address, number, postalCode, city);
+        this.customerList.add(newCustomer);
     }
 
-    public void addRestaurant() {
-
+    public void addDish(String name, String description, int price) {
+        Dish newDish = new Dish(name, description, price);
+        this.dishList.add(newDish);
     }
 
-    public void addDish() {
-
+    public void addRestaurant(String name, String input_phone) {
+        Restaurant newRestaurant = new Restaurant(name, input_phone);
+        this.restaurantList.add(newRestaurant);
     }
 
-    public String getCustomer() {
-        return "";
+    //Ver cliente
+    public Customer getCustomer(int i) {
+        return this.customerList.get(i);
     }
 
-    public String getRestaurant() {
-        return "";
+    public Restaurant getRestaurant(int i) {
+        return this.restaurantList.get(i);
     }
 
-    public String getDish() {
-        return "";
+    public Dish getDish(int i) {
+        return this.dishList.get(i);
     }
 
-    public String order() {
-        return "";
+
+    public void order(Customer customer, Restaurant restaurant, List<Integer> dishesId, List<Integer> quantity) {
+        Order newOrder = new Order(customer, restaurant);
+        int length = dishesId.size();
+        for (int index = 0; index < length; index++) {
+            OrderItem newOrderItem = new OrderItem(dishList.get(dishesId.get(index)), quantity.get(index));
+            newOrder.addOrder(newOrderItem);
+        }
+    }
+
+    public void deleteCustomer(int i) {
+        this.customerList.remove(i);
+    }
+
+    public void deleteRestaurant(int i) {
+        this.restaurantList.remove(i);
+    }
+
+    public void deleteDish(int i) {
+        this.dishList.remove(i);
+    }
+
+    public int numberOfCustomers() {
+        return this.customerList.size();
     }
 }

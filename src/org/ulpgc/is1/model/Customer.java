@@ -33,7 +33,7 @@ public class Customer {
         this.name = name;
         this.surname = surname;
         this.address = new Address(street, number, postalCode, city);
-        this.orderList = new ArrayList<Order>();
+        this.orderList = new ArrayList<>();
     }
 
     /* Métodos */

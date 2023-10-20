@@ -25,6 +25,17 @@ public class Phone {
             this.number = "XXXX";
         }
     }
+    /* Getters y Setters */
+    public void setNumber(String number) {
+        if (this.isValid(number)) {
+            this.number = number;
+        } else {
+            this.number = "XXXX";
+        }
+    }
+    public String getNumber() {
+        return number;
+    }
 
 
     /* Métodos */
@@ -35,15 +46,5 @@ public class Phone {
             return true;
         }
         return false;
-    }
-    public void setNumber(String number) {
-        if (this.isValid(number)) {
-            this.number = number;
-        } else {
-            this.number = "XXXX";
-        }
-    }
-    public String getNumber() {
-        return number;
     }
 }

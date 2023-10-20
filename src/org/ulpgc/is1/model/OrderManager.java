@@ -16,9 +16,9 @@ public class OrderManager {
 
     /* Constructor */
     public OrderManager() {
-        this.restaurantList = new ArrayList();
-        this.customerList = new ArrayList();
-        this.dishList = new ArrayList();
+        this.restaurantList = new ArrayList<Restaurant>();
+        this.customerList = new ArrayList<Customer>();
+        this.dishList = new ArrayList<Dish>();
     }
 
     /* Métodos */

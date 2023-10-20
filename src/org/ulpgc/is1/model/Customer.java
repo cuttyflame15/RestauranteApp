@@ -2,11 +2,12 @@ package org.ulpgc.is1.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Clase Customer para definir un cliente con nombre, apellidos y dirección.
  *
- * @version 1.0
+ * @version 1.3
  */
 public class Customer {
 
@@ -80,3 +81,12 @@ public class Customer {
     public void removeOrder(int index) {
         this.orderList.remove(index);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(name, customer.name) && Objects.equals(surname, customer.surname) && address.equals(customer.address);
+    }
+}

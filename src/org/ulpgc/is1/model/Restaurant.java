@@ -2,6 +2,7 @@ package org.ulpgc.is1.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Clase de restaurante con nombre, teléfono y una lista de menús, con método para añadir menús a la lista.
@@ -73,5 +74,13 @@ public class Restaurant {
 
     public void addOrder(Order order) {
         this.orderList.add(order);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Restaurant that = (Restaurant) o;
+        return Objects.equals(name, that.name) && Objects.equals(phone, that.phone);
     }
 }

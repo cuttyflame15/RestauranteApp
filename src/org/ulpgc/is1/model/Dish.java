@@ -1,5 +1,7 @@
 package org.ulpgc.is1.model;
 
+import java.util.Objects;
+
 /**
  * Clase Dish para definir un plato, con nombre, descripción y precio del mismo.
  * @version 1.0
@@ -38,5 +40,13 @@ public class Dish {
     }
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Dish dish = (Dish) o;
+        return price == dish.price && Objects.equals(name, dish.name);
     }
 }

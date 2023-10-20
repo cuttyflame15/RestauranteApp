@@ -22,7 +22,7 @@ public class Restaurant {
      */
     public Restaurant(String name, String input_phone) {
         this.name = name;
-        Phone phone = new Phone(input_phone);
+        this.phone = new Phone(input_phone);
         this.menuList = new ArrayList();
     }
 

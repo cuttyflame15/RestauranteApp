@@ -57,7 +57,7 @@ public class OrderManager {
         for (int index = 0; index < length; index++) {
             dishOrder.add(dishList.get(dishesId.get(index)));
         }
-        customer.addOrder(restaurant, dishesId, quantity);
+        customer.addOrder(restaurant, dishOrder, quantity);
     }
 
     public void deleteCustomer(int i) {

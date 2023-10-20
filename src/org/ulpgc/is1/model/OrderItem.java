@@ -26,7 +26,7 @@ public class OrderItem {
 
 
 
-    /* Métodos */
+    /* Getters y Setters */
     public Dish getDish() {
         return this.dish;
     }
@@ -40,6 +40,7 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
+    /* Métodos */
     // Método equals para que la lista funcione correctamente
     @Override
     public boolean equals(Object o) {

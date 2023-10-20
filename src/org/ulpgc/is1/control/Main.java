@@ -4,6 +4,13 @@ import org.ulpgc.is1.model.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase main que se encarga de comprobar el funcionamiento mínimo de la aplicación.
+ *
+ * @author Xiao Hui Huang
+ * @author Tycho Quintana Santana
+ * @see <a https://github.com/cuttyflame15/RestauranteApp.git </a>
+ */
 public class Main {
 
     public static void init(OrderManager orderManager) {
@@ -13,12 +20,12 @@ public class Main {
         // ii. Init. Crear dos restaurantes. (*) En el caso que el restaurante tenga un número de teléfono no válido se almacenará el valor: “XXXX”.
         //Menu myKidsMenu = new Menu("Menú para niño", MenuType.Kids);
         //Menu myDailyMenu = new Menu("Menu diario！", MenuType.Daily);
-        orderManager.addRestaurant("La Parilla ardiente", "62600","Menú sabroso", MenuType.Daily);
+        orderManager.addRestaurant("La Parrilla ardiente", "62600","Menú sabroso", MenuType.Daily);
         orderManager.addRestaurant("Cafetería EII", "655555555","Menú IS1", MenuType.Tasting);
         // iii. Init. Crear tres platos diferentes.
         orderManager.addDish("Filete Kobe", "Filete de carne Kobe, importada de Japón", 400);
-        orderManager.addDish("Ensalada bofuri", "Ensalada de verduras del país", 7);
-        orderManager.addDish("Super Hot Dog Galaxial Crossing Under Warioware V", "Bocadillo de salchicha", 5);
+        orderManager.addDish("Ensalada bofuri", "Ensalada de verduras frescas variadas", 7);
+        orderManager.addDish("Crazy Hot-Dog", "Bocadillo de salchicha con pan de perrito caliente", 5);
     }
     public static void main(String[] args) {
         OrderManager orderManager = new OrderManager();

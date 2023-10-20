@@ -40,7 +40,9 @@ public class Menu {
     /* Métodos */
     public void addDish(String name, String description, int price) {
         Dish dish = new Dish(name, description, price);
-        this.dishList.add(dish);
+        if (!dishList.contains(dish)) {
+            this.dishList.add(dish);
+        }
     }
     public void deleteDish(int i) {
         if (i >= 0 && i < dishList.size()) {

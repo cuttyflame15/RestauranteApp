@@ -33,10 +33,7 @@ public class Address {
         this.city = city;
     }
 
-    /* Métodos */
-    public String getAddressInformation() {
-        return getStreet() + ", "  + getNumber() +  ", "  + getPostalCode() +  ", "  + getCity();
-    }
+    /* Getters y Setters*/
 
     public String getStreet() {
         return street;
@@ -64,6 +61,11 @@ public class Address {
 
     public String getCity() {
         return city;
+    }
+
+    /* Métodos */
+    public String getAddressInformation() {
+        return getStreet() + ", "  + getNumber() +  ", "  + getPostalCode() +  ", "  + getCity();
     }
 
     public void setCity(String city) {

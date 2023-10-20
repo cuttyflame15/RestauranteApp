@@ -33,6 +33,27 @@ public class Order {
         this.restaurant.addOrder(this);
     }
 
+    /* Getters y Setters */
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     /* Métodos */
     public void addOrder(OrderItem orderItem) {
         orderItemList.add(orderItem);
@@ -58,26 +79,6 @@ public class Order {
 
     public void addOrderItem(OrderItem orderItem) {
         this.orderItemList.add(orderItem);
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    public Restaurant getRestaurant() {
-        return restaurant;
-    }
-
-    public void setRestaurant(Restaurant restaurant) {
-        this.restaurant = restaurant;
-    }
-
-    public int getId() {
-        return id;
     }
 
     // Método equals para que la lista funcione correctamente

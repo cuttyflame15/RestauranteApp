@@ -16,6 +16,8 @@ public class Restaurant {
 
     private List<Order> orderList;
 
+
+
     /* Constructor */
     public Restaurant(String name, String input_phone, String menuName, MenuType menuType) {
         this.name = name;
@@ -38,6 +40,13 @@ public class Restaurant {
     }
     public void setPhone(Phone phone) {
         this.phone = phone;
+    }
+    public List<Order> getOrderList () {
+        return orderList;
+    }
+
+    public void setOrderList (List<Order> orderList) {
+        this.orderList = orderList;
     }
 
     /* Métodos */

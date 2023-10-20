@@ -24,7 +24,7 @@ public class Main {
         OrderManager orderManager = new OrderManager();
         init(orderManager);
         // iv. Imprimir por pantalla los datos del primer restaurante.
-        System.out.println("Restaurante " + orderManager.getRestaurant(0).getName() + ", Nº teléfono: " + orderManager.getRestaurant(0).getPhone().getNumber());
+        System.out.println("Restaurante " + orderManager.getRestaurant(0).getName() + ", Nº teléfono: " + orderManager.getRestaurant(0).getPhone().getNumber() + ", menu: " + orderManager.getRestaurant(0).menuOfRestaurant());
         // v. Imprimir por pantalla los datos del segundo cliente.
         System.out.println("Nombre: " + orderManager.getCustomer(1).getName() +  ", Apellidos: "  + orderManager.getCustomer(1).getSurname() + ", dirección: " + orderManager.getCustomer(1).getAddress().getAddressInformation());
         // vi. Imprimir por pantalla los datos del tercer plato.

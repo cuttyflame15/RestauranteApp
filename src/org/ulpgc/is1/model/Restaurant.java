@@ -43,4 +43,19 @@ public class Restaurant {
         this.menuList.add(menu);
     }
 
+    public List<Menu> getMenuList() {
+        return menuList;
+    }
+
+    public void setMenuList(List<Menu> menuList) {
+        this.menuList = menuList;
+    }
+
+    public String menuOfRestaurant () {
+        String result = "";
+        for (Menu menu: this.menuList) {
+            result = result + menu.getName() + ", tipo de menú: " + menu.getMenuType() + " ";
+        }
+        return result;
+    }
 }

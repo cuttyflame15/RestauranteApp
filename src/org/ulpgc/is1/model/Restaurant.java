@@ -42,15 +42,12 @@ public class Restaurant {
     public void setPhone(Phone phone) {
         this.phone = phone;
     }
+
     public List<Order> getOrderList() {
         return orderList;
     }
     public List<Menu> getMenuList() {
         return menuList;
-    }
-
-    public void setOrderList (List<Order> orderList) {
-        this.orderList = orderList;
     }
 
     /* Métodos */
@@ -66,9 +63,10 @@ public class Restaurant {
         }
     }
 
-
     public void addOrder(Order order) {
-        this.orderList.add(order);
+        if (!orderList.contains(order)) {
+            this.orderList.add(order);
+        }
     }
     public void deleteOrder(int i) {
         if (i >= 0 && i < orderList.size()) {

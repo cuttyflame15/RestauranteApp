@@ -47,11 +47,15 @@ public class Order {
     }
 
     public OrderItem getOrderItem(int index) {
-        return this.orderItemList.get(index);
+        if (!(index >= this.orderItemList.size())) {
+            return this.orderItemList.get(index);
+        }
     }
 
     public void removeOrderItem(int index) {
-        this.orderItemList.remove(index);
+        if (!(index >= this.orderItemList.size())) {
+            this.orderItemList.remove(index);
+        }
     }
 
     public void addOrderItem(OrderItem orderItem) {

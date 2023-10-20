@@ -75,11 +75,15 @@ public class Customer {
     }
 
     public Order getOrder(int index) {
-        return this.orderList.get(index);
+        if (!(index >= this.orderList.size())) {
+            return this.orderList.get(index);
+        }
     }
 
     public void removeOrder(int index) {
-        this.orderList.remove(index);
+        if (!(index >= this.orderList.size())) {
+            this.orderList.remove(index);
+        }
     }
 
     // Método equals para que la lista funcione correctamente

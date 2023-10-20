@@ -51,7 +51,7 @@ public class Order {
     }
 
     public void removeOrderItem(int index) {
-        if (!(index >= this.orderItemList.size())) {
+        if (!(index >= this.orderItemList.size())  && (index >= 0)) {
             this.orderItemList.remove(index);
         }
     }

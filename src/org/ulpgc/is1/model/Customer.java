@@ -79,7 +79,7 @@ public class Customer {
     }
 
     public void removeOrder(int index) {
-        if (!(index >= this.orderList.size())) {
+        if (!(index >= this.orderList.size()) && (index >= 0)) {
             this.orderList.remove(index);
         }
     }

@@ -61,19 +61,19 @@ public class OrderManager {
     }
 
     public void deleteCustomer(int i) {
-        if (!(i >= this.customerList.size())) {
+        if (!(i >= this.customerList.size()) && (i >= 0)) {
             this.customerList.remove(i);
         }
     }
 
     public void deleteRestaurant(int i) {
-        if (!(i >= this.restaurantList.size())) {
+        if (!(i >= this.restaurantList.size()) && (i >= 0)) {
             this.restaurantList.remove(i);
         }
     }
 
     public void deleteDish(int i) {
-        if (!(i >= this.dishList.size())) {
+        if (!(i >= this.dishList.size()) && (i >= 0)) {
             this.dishList.remove(i);
         }
     }

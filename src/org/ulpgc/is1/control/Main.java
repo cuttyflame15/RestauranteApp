@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @author Xiao Hui Huang
  * @author Tycho Quintana Santana
- * @see <a https://github.com/cuttyflame15/RestauranteApp.git </a>
+ * @link <a href="https://github.com/cuttyflame15/RestauranteApp.git">...</a>
  */
 public class Main {
 

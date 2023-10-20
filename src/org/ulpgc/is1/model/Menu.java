@@ -6,7 +6,7 @@ import java.util.Objects;
 
 /**
  * Clase que define un menú de platos con nombre, tipo de menú y lista de platos.
- * @version 1.2
+ * @version 1.3
  */
 public class Menu {
 
@@ -42,6 +42,11 @@ public class Menu {
         Dish dish = new Dish(name, description, price);
         this.dishList.add(dish);
     }
+    public void deleteDish(int i) {
+        if (i >= 0 && i < dishList.size()) {
+            this.dishList.remove(i);
+        }
+    }
 
     @Override
     public boolean equals(Object other) {
@@ -49,12 +54,5 @@ public class Menu {
         if (other == null || getClass() != other.getClass()) return false;
         Menu menu = (Menu) other;
         return Objects.equals(name, menu.name) && Objects.equals(menuType, menu.menuType);
-    }
-
-
-    public void deleteDish(int i) {
-        if (i >= 0 && i < dishList.size()) {
-            this.dishList.remove(i);
-        }
     }
 }

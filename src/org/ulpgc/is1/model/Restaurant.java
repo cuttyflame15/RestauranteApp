@@ -6,7 +6,7 @@ import java.util.Objects;
 
 /**
  * Clase de restaurante con nombre, teléfono y una lista de menús, con método para añadir menús a la lista.
- * @version 1.5
+ * @version 1.6
  */
 public class Restaurant {
 
@@ -56,7 +56,9 @@ public class Restaurant {
     /* Métodos */
     public void addMenu(String name, MenuType menuType) {
         Menu menu = new Menu(name, menuType);
-        this.menuList.add(menu);
+        if (!menuList.contains(menu)) {
+            this.menuList.add(menu);
+        }
     }
     public void deleteMenu(int i) {
         if (i >= 0 && i < menuList.size()) {

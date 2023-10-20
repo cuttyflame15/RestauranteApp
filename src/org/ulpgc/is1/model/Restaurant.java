@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Clase de restaurante con nombre, teléfono y una lista de menús, con método para añadir menús a la lista.
- * @version 1.1
+ * @version 1.2
  */
 public class Restaurant {
 
@@ -15,10 +15,10 @@ public class Restaurant {
     private Phone phone;
 
     /* Constructor */
-    public Restaurant(String name, String number) {
+    public Restaurant(String name, String input_phone) {
         this.name = name;
-
-        menuList = new ArrayList();
+        this.phone = new Phone(input_phone);
+        this.menuList = new ArrayList();
     }
 
     /* Getters y setters */

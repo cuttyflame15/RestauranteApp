@@ -11,8 +11,8 @@ public class Main {
         orderManager.addCustomer("TychoPersona2", "Quintana", "La Herradura", 157, 35000,"Telde");
         orderManager.addCustomer("Tycho", "Quintana", "La Herradura", 157, 35000,"Telde");
         // ii. Init. Crear dos restaurantes. (*) En el caso que el restaurante tenga un número de teléfono no válido se almacenará el valor: “XXXX”.
-        Menu myKidsMenu = new Menu("Menú para niño", MenuType.Kids);
-        Menu myDailyMenu = new Menu("Menu diario！", MenuType.Daily);
+        //Menu myKidsMenu = new Menu("Menú para niño", MenuType.Kids);
+        //Menu myDailyMenu = new Menu("Menu diario！", MenuType.Daily);
         orderManager.addRestaurant("La Preferida", "654444444");
         orderManager.addRestaurant("Casa Mario", "655555555");
         // iii. Init. Crear tres platos diferentes.

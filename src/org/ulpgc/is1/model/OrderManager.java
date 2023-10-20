@@ -5,8 +5,7 @@ import java.util.List;
 
 /**
  * Clase organizadora de métodos que administra los pedidos de los clientes.
- * @version 1.0
- * RESTRICCIONES en cada clase?
+ * @version 1.1
  */
 public class OrderManager {
 
@@ -34,8 +33,8 @@ public class OrderManager {
         this.dishList.add(newDish);
     }
 
-    public void addRestaurant(String name, String number) {
-        Restaurant newRestaurant = new Restaurant(name, number, number);
+    public void addRestaurant(String name, String input_phone) {
+        Restaurant newRestaurant = new Restaurant(name, input_phone);
         this.restaurantList.add(newRestaurant);
     }
 

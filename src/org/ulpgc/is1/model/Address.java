@@ -70,6 +70,7 @@ public class Address {
         this.city = city;
     }
 
+    // Método equals para poder comparar Customers
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -79,9 +79,12 @@ public class Customer {
     }
 
     public void removeOrder(int index) {
-        this.orderList.remove(index);
+        if (!(index >= this.orderList.size())) {
+            this.orderList.remove(index);
+        }
     }
 
+    // Método equals para que la lista funcione correctamente
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

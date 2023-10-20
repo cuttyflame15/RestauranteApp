@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Clase organizadora de métodos que administra los pedidos de los clientes.
- * @version 1.1
+ * @version 1.2
  */
 public class OrderManager {
 
@@ -47,7 +47,7 @@ public class OrderManager {
     }
 
     public Dish getDish(int i) {
-        return this.dishList.get(i);
+            return this.dishList.get(i);
     }
 
 
@@ -61,15 +61,21 @@ public class OrderManager {
     }
 
     public void deleteCustomer(int i) {
-        this.customerList.remove(i);
+        if (!(i >= this.customerList.size())) {
+            this.customerList.remove(i);
+        }
     }
 
     public void deleteRestaurant(int i) {
-        this.restaurantList.remove(i);
+        if (!(i >= this.restaurantList.size())) {
+            this.restaurantList.remove(i);
+        }
     }
 
     public void deleteDish(int i) {
-        this.dishList.remove(i);
+        if (!(i >= this.dishList.size())) {
+            this.dishList.remove(i);
+        }
     }
 
     public int numberOfCustomers() {

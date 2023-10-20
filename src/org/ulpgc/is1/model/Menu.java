@@ -51,6 +51,7 @@ public class Menu {
         return Objects.equals(name, menu.name) && Objects.equals(menuType, menu.menuType);
     }
 
+
     public void deleteDish(int i) {
         if (i >= 0 && i < dishList.size()) {
             this.dishList.remove(i);

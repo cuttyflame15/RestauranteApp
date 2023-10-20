@@ -27,7 +27,7 @@ public class Order {
      */
     public Order(Customer customer, Restaurant restaurant) {
         this.id = NEXT_ID++;
-        this.orderItemList = new ArrayList<OrderItem>();
+        this.orderItemList = new ArrayList<>();
         this.customer = customer;
         this.restaurant = restaurant;
         this.restaurant.addOrder(this);

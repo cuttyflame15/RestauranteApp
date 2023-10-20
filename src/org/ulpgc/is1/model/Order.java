@@ -78,6 +78,7 @@ public class Order {
         return id;
     }
 
+    // Método equals para que la lista funcione correctamente
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

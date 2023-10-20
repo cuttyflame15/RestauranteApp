@@ -63,10 +63,9 @@ public class Restaurant {
         }
     }
 
+    //Un restaurante puede tener pedidos repetidos.
     public void addOrder(Order order) {
-        if (!orderList.contains(order)) {
-            this.orderList.add(order);
-        }
+        this.orderList.add(order);
     }
     public void deleteOrder(int i) {
         if (i >= 0 && i < orderList.size()) {

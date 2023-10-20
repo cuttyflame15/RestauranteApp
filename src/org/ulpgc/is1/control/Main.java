@@ -18,6 +18,7 @@ public class Main {
         orderManager.addCustomer("Xiao Hui", "Huang", "Practicante Ignacio Rodríguez", 1, 35017,"Las Palmas");
         orderManager.addCustomer("Tycho", "Quintana", "La Herradura", 157, 35000,"Telde");
         // ii. Init. Crear dos restaurantes. (*) En el caso que el restaurante tenga un número de teléfono no válido se almacenará el valor: “XXXX”.
+        //Se introduce teléfono incorrecto para comprobar que el programa devuelve "XXXX"
         orderManager.addRestaurant("La Parrilla ardiente", "62600","Menú sabroso", MenuType.Daily);
         orderManager.addRestaurant("Cafetería EII", "655555555","Menú IS1", MenuType.Tasting);
         // iii. Init. Crear tres platos diferentes.

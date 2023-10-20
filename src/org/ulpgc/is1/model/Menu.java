@@ -23,7 +23,7 @@ public class Menu {
     public Menu(String name, MenuType menuType) {
         this.name = name;
         this.menuType = menuType;
-        dishList = new ArrayList();
+        dishList = new ArrayList<>();
     }
 
     /* Getters y setters */

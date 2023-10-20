@@ -16,9 +16,9 @@ public class OrderManager {
 
     /* Constructor */
     public OrderManager() {
-        this.restaurantList = new ArrayList<Restaurant>();
-        this.customerList = new ArrayList<Customer>();
-        this.dishList = new ArrayList<Dish>();
+        this.restaurantList = new ArrayList<>();
+        this.customerList = new ArrayList<>();
+        this.dishList = new ArrayList<>();
     }
 
     /* Métodos */
@@ -73,10 +73,9 @@ public class OrderManager {
     }
 
     public void order(Customer customer, Restaurant restaurant, List<Integer> dishesId, List<Integer> quantity) {
-        int length = dishesId.size();
         List<Dish> dishOrder = new ArrayList<>();
-        for (int index = 0; index < length; index++) {
-            dishOrder.add(dishList.get(dishesId.get(index)));
+        for (Integer integer : dishesId) {
+            dishOrder.add(dishList.get(integer));
         }
         customer.addOrder(restaurant, dishOrder, quantity);
     }

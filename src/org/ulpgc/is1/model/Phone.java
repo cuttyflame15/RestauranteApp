@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * Clase phone para almacenar el teléfono de contacto de los clientes.
  *
- * @version 1.0
+ * @version 1.1
  */
 public class Phone {
 
@@ -40,7 +40,7 @@ public class Phone {
 
     /* Métodos */
     public boolean isValid(String number) {
-        Pattern pattern = Pattern.compile("6{1}[0-9]{8}|7{1}[0-9]{8}|928{1}[0-9]{6}");
+        Pattern pattern = Pattern.compile("6[0-9]{8}|7[0-9]{8}|928[0-9]{6}");
         Matcher matcher = pattern.matcher(number);
         return matcher.find();
     }

@@ -47,9 +47,7 @@ public class Order {
     }
 
     public OrderItem getOrderItem(int index) {
-        if (!(index >= this.orderItemList.size())) {
             return this.orderItemList.get(index);
-        }
     }
 
     public void removeOrderItem(int index) {

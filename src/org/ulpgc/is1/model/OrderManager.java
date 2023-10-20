@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Clase organizadora de métodos que administra los pedidos de los clientes.
- * @version 1.1
+ * @version 1.2
  */
 public class OrderManager {
 
@@ -39,21 +39,15 @@ public class OrderManager {
     }
 
     public Customer getCustomer(int i) {
-        if (!(i >= this.customerList.size())) {
-            return this.customerList.get(i);
-        }
+        return this.customerList.get(i);
     }
 
     public Restaurant getRestaurant(int i) {
-        if (!(i >= this.restaurantList.size())) {
-            return this.restaurantList.get(i);
-        }
+        return this.restaurantList.get(i);
     }
 
     public Dish getDish(int i) {
-        if (!(i >= this.dishList.size())) {
             return this.dishList.get(i);
-        }
     }
 
 

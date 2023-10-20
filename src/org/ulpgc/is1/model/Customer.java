@@ -75,9 +75,7 @@ public class Customer {
     }
 
     public Order getOrder(int index) {
-        if (!(index >= this.orderList.size())) {
-            return this.orderList.get(index);
-        }
+        return this.orderList.get(index);
     }
 
     public void removeOrder(int index) {

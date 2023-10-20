@@ -24,11 +24,14 @@ public class Main {
         OrderManager orderManager = new OrderManager();
         init(orderManager);
         // iv. Imprimir por pantalla los datos del primer restaurante.
-        System.out.println("Restaurante " + orderManager.getRestaurant(0).getName() + ", Nº teléfono: " + orderManager.getRestaurant(0).getPhone().getNumber() + ", menu: " + orderManager.getRestaurant(0).menuOfRestaurant());
+        System.out.println("Restaurante: " + orderManager.getRestaurant(0).getName() + ", Nº teléfono: " + orderManager.getRestaurant(0).getPhone().getNumber() + ", lista de menús: " + orderManager.getRestaurant(0).menuOfRestaurant());
+        System.out.println();
         // v. Imprimir por pantalla los datos del segundo cliente.
-        System.out.println("Nombre: " + orderManager.getCustomer(1).getName() +  ", Apellidos: "  + orderManager.getCustomer(1).getSurname() + ", dirección: " + orderManager.getCustomer(1).getAddress().getAddressInformation());
+        System.out.println("Cliente 2: Nombre: " + orderManager.getCustomer(1).getName() +  ", Apellidos: "  + orderManager.getCustomer(1).getSurname() + ", dirección: " + orderManager.getCustomer(1).getAddress().getAddressInformation());
+        System.out.println();
         // vi. Imprimir por pantalla los datos del tercer plato.
-        System.out.println("Nombre: " + orderManager.getDish(2).getName() + ", descripcion: " + orderManager.getDish(2).getDescription() + ", precio: " + orderManager.getDish(2).getPrice() + "€");
+        System.out.println("Plato: " + orderManager.getDish(2).getName() + ". Descripcion: " + orderManager.getDish(2).getDescription() + ". Precio: " + orderManager.getDish(2).getPrice() + "€");
+        System.out.println();
         // vii. Crear un pedido por parte del primer cliente, al primer restaurante, que incluya los dos últimos platos del catálogo. (*) Sugerencia: para especificar los platos y la cantidad de ellos, se pueden utilizar dos ArrayList<Integer> que indiquen la posición del plato en el catálogo y la cantidad de dicho plato, respectivamente. (void order(Customer customer, Restaurant restaurant, ArrayList<Integer> dishesId, ArrayList<Integer> quantity))
         List<Integer> dishes = new ArrayList<Integer>();
         List<Integer> quantity = new ArrayList<Integer>();
@@ -40,9 +43,10 @@ public class Main {
         // viii. Borrar el segundo cliente.
         orderManager.deleteCustomer(1);
         // ix. Imprimir por pantalla el número de clientes.
-        System.out.println(orderManager.numberOfCustomers());;
+        System.out.println("Número de clientes: " + orderManager.numberOfCustomers());
+        System.out.println();
         // x. Imprimir por pantalla el primer pedido del primer cliente, incluyendo el precio total del pedido.
         Order order = orderManager.getCustomer(0).getOrder(0);
-        System.out.println("ID: " + order.getId() + ", cliente: " + order.getCustomer().getName() + ", dirección cliente: " + order.getCustomer().getAddress().getAddressInformation() + ", restaurante: " + order.getRestaurant().getName() + ", precio total: " + order.price() + "€");
+        System.out.println("Pedido del primer cliente:\nID: " + order.getId() + "\nNombre: " + order.getCustomer().getName() + "\nApellidos: " + orderManager.getCustomer(0).getSurname() + "\nDirección del cliente: " + order.getCustomer().getAddress().getAddressInformation() + "\nRestaurante: " + order.getRestaurant().getName() + "\nPrecio total: " + order.price() + "€");
     }
 }

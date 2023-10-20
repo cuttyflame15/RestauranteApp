@@ -30,6 +30,7 @@ public class Order {
         this.orderItemList = new ArrayList<OrderItem>();
         this.customer = customer;
         this.restaurant = restaurant;
+        this.restaurant.addOrder(this);
     }
 
     /* Métodos */

@@ -14,12 +14,15 @@ public class Restaurant {
     private String name;
     private Phone phone;
 
+    private List<Order> orderList;
+
     /* Constructor */
     public Restaurant(String name, String input_phone, String menuName, MenuType menuType) {
         this.name = name;
         this.phone = new Phone(input_phone);
         this.menuList = new ArrayList();
         this.addMenu(menuName, menuType);
+        this.orderList = new ArrayList();
     }
 
     /* Getters y setters */
@@ -57,5 +60,9 @@ public class Restaurant {
             result = result + menu.getName() + ", tipo de menú: " + menu.getMenuType() + " ";
         }
         return result;
+    }
+
+    public void addOrder(Order order) {
+        this.orderList.add(order);
     }
 }

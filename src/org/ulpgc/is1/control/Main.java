@@ -8,15 +8,15 @@ public class Main {
 
     public static void init(OrderManager orderManager) {
         // i. Init. Crear dos clientes.
-        orderManager.addCustomer("TychoPersona2", "Quintana", "La Herradura", 157, 35000,"Telde");
+        orderManager.addCustomer("Xiao Hui", "Huang", "Practicante Ignacio Rodríguez", 1, 35017,"Las Palmas");
         orderManager.addCustomer("Tycho", "Quintana", "La Herradura", 157, 35000,"Telde");
         // ii. Init. Crear dos restaurantes. (*) En el caso que el restaurante tenga un número de teléfono no válido se almacenará el valor: “XXXX”.
         //Menu myKidsMenu = new Menu("Menú para niño", MenuType.Kids);
         //Menu myDailyMenu = new Menu("Menu diario！", MenuType.Daily);
-        orderManager.addRestaurant("Cafetería ULPGC", "654444444","Menu ULGPC", MenuType.Daily);
+        orderManager.addRestaurant("La Parilla ardiente", "62600","Menú sabroso", MenuType.Daily);
         orderManager.addRestaurant("Cafetería EII", "655555555","Menú IS1", MenuType.Tasting);
         // iii. Init. Crear tres platos diferentes.
-        orderManager.addDish("Hamburguesa Ladrón Fantasma", "Hamburguesa de pollo", 13);
+        orderManager.addDish("Filete Kobe", "Filete de carne Kobe, importada de Japón", 400);
         orderManager.addDish("Ensalada bofuri", "Ensalada de verduras del país", 7);
         orderManager.addDish("Super Hot Dog Galaxial Crossing Under Warioware V", "Bocadillo de salchicha", 5);
     }
@@ -28,7 +28,7 @@ public class Main {
         // v. Imprimir por pantalla los datos del segundo cliente.
         System.out.println("Nombre: " + orderManager.getCustomer(1).getName() +  ", Apellidos: "  + orderManager.getCustomer(1).getSurname() + ", dirección: " + orderManager.getCustomer(1).getAddress().getAddressInformation());
         // vi. Imprimir por pantalla los datos del tercer plato.
-        System.out.println("Nombre: " + orderManager.getDish(2).getName() + ", descripcion: " + orderManager.getDish(2).getDescription() + ", precio: " + orderManager.getDish(2).getPrice());
+        System.out.println("Nombre: " + orderManager.getDish(2).getName() + ", descripcion: " + orderManager.getDish(2).getDescription() + ", precio: " + orderManager.getDish(2).getPrice() + "€");
         // vii. Crear un pedido por parte del primer cliente, al primer restaurante, que incluya los dos últimos platos del catálogo. (*) Sugerencia: para especificar los platos y la cantidad de ellos, se pueden utilizar dos ArrayList<Integer> que indiquen la posición del plato en el catálogo y la cantidad de dicho plato, respectivamente. (void order(Customer customer, Restaurant restaurant, ArrayList<Integer> dishesId, ArrayList<Integer> quantity))
         List<Integer> dishes = new ArrayList<Integer>();
         List<Integer> quantity = new ArrayList<Integer>();
@@ -43,6 +43,6 @@ public class Main {
         System.out.println(orderManager.numberOfCustomers());;
         // x. Imprimir por pantalla el primer pedido del primer cliente, incluyendo el precio total del pedido.
         Order order = orderManager.getCustomer(0).getOrder(0);
-        System.out.println("ID: " + order.getId() + ", cliente: " + order.getCustomer().getName() + ", dirección cliente: " + order.getCustomer().getAddress().getAddressInformation() + ", restaurante: " + order.getRestaurant().getName() + ", precio total: " + order.price());
+        System.out.println("ID: " + order.getId() + ", cliente: " + order.getCustomer().getName() + ", dirección cliente: " + order.getCustomer().getAddress().getAddressInformation() + ", restaurante: " + order.getRestaurant().getName() + ", precio total: " + order.price() + "€");
     }
 }

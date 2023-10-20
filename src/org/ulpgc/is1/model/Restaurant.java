@@ -6,7 +6,7 @@ import java.util.Objects;
 
 /**
  * Clase de restaurante con nombre, teléfono y una lista de menús, con método para añadir menús a la lista.
- * @version 1.2
+ * @version 1.5
  */
 public class Restaurant {
 
@@ -45,6 +45,9 @@ public class Restaurant {
     public List<Order> getOrderList() {
         return orderList;
     }
+    public List<Menu> getMenuList() {
+        return menuList;
+    }
 
     public void setOrderList (List<Order> orderList) {
         this.orderList = orderList;
@@ -55,13 +58,20 @@ public class Restaurant {
         Menu menu = new Menu(name, menuType);
         this.menuList.add(menu);
     }
-
-    public List<Menu> getMenuList() {
-        return menuList;
+    public void deleteMenu(int i) {
+        if (i >= 0 && i < menuList.size()) {
+            this.menuList.remove(i);
+        }
     }
 
-    public void setMenuList(List<Menu> menuList) {
-        this.menuList = menuList;
+
+    public void addOrder(Order order) {
+        this.orderList.add(order);
+    }
+    public void deleteOrder(int i) {
+        if (i >= 0 && i < orderList.size()) {
+            this.orderList.remove(i);
+        }
     }
 
     public String menuOfRestaurant () {
@@ -71,12 +81,7 @@ public class Restaurant {
         }
         return result;
     }
-
-    public void addOrder(Order order) {
-        this.orderList.add(order);
-    }
-
-    // Método equals para que la lista funcione correctamente
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

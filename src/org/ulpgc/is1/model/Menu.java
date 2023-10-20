@@ -2,10 +2,11 @@ package org.ulpgc.is1.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Clase que define un menú de platos con nombre, tipo de menú y lista de platos.
- * @version 1.1
+ * @version 1.2
  */
 public class Menu {
 
@@ -40,5 +41,20 @@ public class Menu {
     public void addDish(String name, String description, int price) {
         Dish dish = new Dish(name, description, price);
         this.dishList.add(dish);
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        Menu menu = (Menu) other;
+        return Objects.equals(name, menu.name) && Objects.equals(menuType, menu.menuType);
+    }
+
+
+    public void deleteDish(int i) {
+        if (i >= 0 && i < dishList.size()) {
+            this.dishList.remove(i);
+        }
     }
 }

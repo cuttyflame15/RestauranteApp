@@ -42,9 +42,6 @@ public class Phone {
     public boolean isValid(String number) {
         Pattern pattern = Pattern.compile("6{1}[0-9]{8}|7{1}[0-9]{8}|928{1}[0-9]{6}");
         Matcher matcher = pattern.matcher(number);
-        if (matcher.find()) {
-            return true;
-        }
-        return false;
+        return matcher.find();
     }
 }

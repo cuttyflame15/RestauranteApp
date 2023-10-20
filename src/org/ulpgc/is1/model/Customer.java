@@ -66,7 +66,7 @@ public class Customer {
     public void addOrder(Restaurant restaurant, List<Dish> dishList, List<Integer> quantity) {
         Order newOrder = new Order(this, restaurant);
         int length = dishList.size();
-        for (int index; index < length; index++) {
+        for (int index = 0; index < length; index++) {
             OrderItem newOrderItem = new OrderItem(dishList.get(index), quantity.get(index));
             newOrder.addOrder(newOrderItem);
         }

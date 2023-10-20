@@ -21,12 +21,14 @@ public class Phone {
     public Phone(String phoneNumber) {
         if (this.isValid(phoneNumber)) {
             this.number = phoneNumber;
+        } else {
+            this.number = "XXXX";
         }
     }
 
     /* Métodos */
     public boolean isValid(String number) {
-        Pattern pattern = Pattern.compile("6{1}[0-9]{8}|928{1}[0-9]{6}");
+        Pattern pattern = Pattern.compile("6{1}[0-9]{8}|7{1}[0-9]{8}|928{1}[0-9]{6}");
         Matcher matcher = pattern.matcher(number);
         if (matcher.find()) {
             return true;

@@ -15,7 +15,11 @@ public class Menu {
     private String name;
     private MenuType menuType;
 
-    /* Constructor */
+    /** Constructor
+     *
+     * @param name Nombre del menú.
+     * @param menuType Tipo del menú.
+     */
     public Menu(String name, MenuType menuType) {
         this.name = name;
         this.menuType = menuType;

@@ -18,8 +18,13 @@ public class Restaurant {
     private List<Order> orderList;
 
 
-
-    /* Constructor */
+    /** Constructor
+     *
+     * @param name Nombre del restaurante.
+     * @param input_phone Teléfono del restaurante.
+     * @param menuName Nombre del menú.
+     * @param menuType Tipo del menú.
+     */
     public Restaurant(String name, String input_phone, String menuName, MenuType menuType) {
         this.name = name;
         this.phone = new Phone(input_phone);

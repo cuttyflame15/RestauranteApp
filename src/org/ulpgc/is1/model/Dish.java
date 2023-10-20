@@ -13,7 +13,12 @@ public class Dish {
     private String description;
     private int price;
 
-    /* Constructor */
+    /** Constructor
+     *
+     * @param name Nombre del plato.
+     * @param description Descripción del plato.
+     * @param price Precio del plato.
+     */
     public Dish(String name, String description, int price) {
         this.name = name;
         this.description = description;
